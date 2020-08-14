@@ -68,7 +68,7 @@ You can add the _"Pages of selected doktypes"_ content element to every page to 
 the frontend. The content element already comes with a "News" template to render the list accordingly.
 
 #### Override List Template
-You can override the News List CE. To do that you have to extend the FLUIDTEMPLATE rootPaths. You can either do this in
+You can override the List CE template. To do that you have to extend the FLUIDTEMPLATE rootPaths. You can either do this in
 your own extension by extending the `lib.contentElement` TypoScript
 (as described [HERE](https://docs.typo3.org/m/typo3/reference-coreapi/master/en-us/ApiOverview/ContentElements/AddingYourOwnContentElements.html#configure-the-frontend-template))
 or you could use the constants provided by flexible_news:
@@ -87,7 +87,7 @@ The detail view is just a view of the page (with the default page template). How
 to have a special page template for just the news articles (e.g to show specific content on every news article).
 
 #### Adding News Article Page Template
-Assumed you want to add social media share buttons to every news article you have to do the following.
+Assuming you want to add social media share buttons to every news article you have to do the following.
 
 - Add TypoScript for special dokType to override FLUIDTEMPLATE:  
 ```
