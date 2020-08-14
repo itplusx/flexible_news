@@ -1,0 +1,16 @@
+lib.contentElement {
+    templateRootPaths {
+        32 = EXT:flexible_news/Resources/Private/Templates/PageList
+        33 = {$plugin.tx_flexiblenews.templateRootPath}
+    }
+
+    partialRootPaths {
+        32 = EXT:flexible_news/Resources/Private/Partials/PageList
+        33 = {$plugin.tx_flexiblenews.partialRootPath}
+    }
+
+    layoutRootPaths {
+        32 = EXT:flexible_news/Resources/Private/Layouts/PageList
+        33 = {$plugin.tx_flexiblenews.layoutRootPath}
+    }
+}

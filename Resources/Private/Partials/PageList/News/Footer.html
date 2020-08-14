@@ -1,0 +1,19 @@
+<html
+  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+  xmlns:core="http://typo3.org/ns/TYPO3/CMS/Core/ViewHelpers"
+  data-namespace-typo3-fluid="true"
+>
+<div class="FlexibleNewsPreviewFooter">
+  <f:if condition="{keywords}">
+    <core:icon identifier="actions-tag"/>
+    {keywords}
+    <f:if condition="{author.name}">
+      &nbsp;&nbsp;
+    </f:if>
+  </f:if>
+  <f:if condition="{author.name}">
+    <core:icon identifier="actions-user"/>
+    {author.name} {f:if(condition: author.email, then: '({author.email})')}
+  </f:if>
+</div>
+</html>

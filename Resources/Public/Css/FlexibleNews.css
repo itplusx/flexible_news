@@ -1,0 +1,94 @@
+:root {
+  --FlexibleNewsPreview-transitionDuration: 0.3s;
+  --FlexibleNewsPreview-transitionTimingFunction: cubic-bezier(0.3, 0, 0.2, 1);
+  --FlexibleNewsPreview-onEmphasized-filter: brightness(calc(100% - 100% * 0.08));
+}
+
+.FlexibleNewsPreviewList {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-row-gap: 50px;
+}
+
+.FlexibleNewsPreview a {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-row-gap: 15px;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition-duration: var(--FlexibleNewsPreview-transitionDuration);
+  transition-duration: var(--FlexibleNewsPreview-transitionDuration);
+  -webkit-transition-property: -webkit-filter;
+  transition-property: -webkit-filter;
+  transition-property: filter;
+  transition-property: filter, -webkit-filter;
+  -webkit-transition-timing-function: var(--FlexibleNewsPreview-transitionTimingFunction);
+  transition-timing-function: var(--FlexibleNewsPreview-transitionTimingFunction);
+  outline: none;
+}
+
+.FlexibleNewsPreview a:active,
+.FlexibleNewsPreview a:focus,
+.FlexibleNewsPreview a:hover {
+  -webkit-filter: var(--FlexibleNewsPreview-onEmphasized-filter);
+  filter: var(--FlexibleNewsPreview-onEmphasized-filter);
+  text-decoration: none;
+}
+
+.FlexibleNewsPreviewHeader {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-row-gap: 5px;
+  cursor: inherit;
+  pointer-events: inherit;
+}
+
+.FlexibleNewsPreviewHeader-topline {
+  -webkit-filter: contrast(20%);
+  filter: contrast(20%);
+}
+
+.FlexibleNewsPreviewHeader-title h1,
+.FlexibleNewsPreviewHeader-title h2,
+.FlexibleNewsPreviewHeader-title h3,
+.FlexibleNewsPreviewHeader-title h4,
+.FlexibleNewsPreviewHeader-title h5,
+.FlexibleNewsPreviewHeader-title h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.FlexibleNewsPreviewHeader-image {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.FlexibleNewsPreviewHeader-image .image .image-embed-item {
+  display: block;
+  cursor: inherit;
+  pointer-events: inherit;
+  height: auto;
+  max-width: 100%;
+}
+
+.FlexibleNewsPreviewHeader-image .image {
+  display: block;
+  cursor: inherit;
+  pointer-events: inherit;
+  margin: 0;
+}
+
+.FlexibleNewsPreview-abstract {
+  display: block;
+  cursor: inherit;
+  pointer-events: inherit;
+}
+
+.FlexibleNewsPreviewFooter {
+  -webkit-filter: contrast(20%);
+  filter: contrast(20%);
+  text-align: right;
+}

@@ -1,0 +1,45 @@
+<html
+  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+  data-namespace-typo3-fluid="true"
+>
+<article class="FlexibleNewsPreview">
+  <f:link.typolink
+    parameter="{page.data.uid}{f:if(condition: page.data.target, then: ' {page.data.target}')}"
+    title="{page.data.title}"
+  >
+    <header class="FlexibleNewsPreview-header">
+      <f:render
+        partial="News/Header"
+        arguments="{
+                media: page.media,
+                title: page.data.title,
+                headerLayout: data.pi_flexform.headerLayout,
+                topline: {
+                    date: '{page.data.lastUpdated ? page.data.lastUpdated : page.data.crdate}',
+                    categories: page.categories
+                }
+              }"
+      />
+    </header>
+    <f:if condition="{page.data.abstract}">
+      <div class="FlexibleNewsPreview-abstract">
+        {page.data.abstract -> f:format.nl2br()}
+      </div>
+    </f:if>
+    <f:if condition="{page.data.author} || {page.data.author_email} || {page.data.keywords}">
+      <footer class="FlexibleNewsPreview-footer">
+        <f:render
+          partial="News/Footer"
+          arguments="{
+            author: {
+                name: page.data.author,
+                email: page.data.author_email
+            },
+            keywords: page.data.keywords
+          }"
+        />
+      </footer>
+    </f:if>
+  </f:link.typolink>
+</article>
+</html>

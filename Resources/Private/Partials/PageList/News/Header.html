@@ -1,0 +1,56 @@
+<html
+  xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+  data-namespace-typo3-fluid="true"
+>
+<div class="FlexibleNewsPreviewHeader">
+  <f:if condition="{media}">
+    <div class="FlexibleNewsPreviewHeader-image">
+      <f:for
+        each="{media}"
+        as="mediaItem"
+      >
+        <f:render
+          partial="Media/Type"
+          arguments="{file: mediaItem, settings: settings}"
+        />
+      </f:for>
+    </div>
+  </f:if>
+  <f:if condition="{topline.date || topline.categories}">
+    <div class="FlexibleNewsPreviewHeader-topline">
+      <f:if condition="{topline.date}">
+        <time
+          itemprop="datePublished"
+          datetime="{f:format.date(date: topline.date, format:'Y-m-d')}"
+        >
+          <f:format.date format="{f:translate(key:'dateFormat', extensionName: 'flexible_news')}">
+            {topline.date}
+          </f:format.date>
+        </time>
+      </f:if>
+      <f:if condition="{topline.categories}">
+        &nbsp;–&nbsp;
+        <f:for
+          each="{topline.categories}"
+          as="category"
+          iteration="iterator"
+        >
+          {category.data.title}{f:if(condition: iterator.isLast, else: ', ')}
+        </f:for>
+      </f:if>
+    </div>
+  </f:if>
+  <f:if condition="{title}">
+    <div class="FlexibleNewsPreviewHeader-title">
+      <f:render
+        partial="Header/Header"
+        arguments="{
+          header: title,
+          layout: headerLayout,
+          default: '{settings.defaultHeaderType + 1}'
+        }"
+      />
+    </div>
+  </f:if>
+</div>
+</html>

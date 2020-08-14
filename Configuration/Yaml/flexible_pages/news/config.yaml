@@ -1,0 +1,9 @@
+dokType: 87
+configuration:
+  label: 'News'
+  iconSet:
+    defaultIcon:
+      source: 'EXT:flexible_news/Resources/Public/Icons/apps-pagetree-flexiblenews.svg'
+    hideInMenuIcon:
+      source: 'EXT:flexible_news/Resources/Public/Icons/apps-pagetree-flexiblenews-hideinmenu.svg'
+  isDraggableInNewPageDragArea: true

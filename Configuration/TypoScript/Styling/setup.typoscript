@@ -1,0 +1,3 @@
+page.includeCSS {
+    flexible_news = EXT:flexible_news/Resources/Public/Css/FlexibleNews.css
+}
