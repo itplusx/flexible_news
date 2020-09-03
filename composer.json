@@ -27,8 +27,8 @@
   ],
   "license": "MIT",
   "require": {
-    "typo3/cms-core": "^9.5",
-    "itplusx/flexible-pages": "^1.0"
+    "typo3/cms-core": "^9.5 || ^10.0",
+    "itplusx/flexible-pages": "^1.0 || ^2.0"
   },
   "replace": {
     "itplusx/flexible-news": "self.version",
