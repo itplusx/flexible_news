@@ -31,7 +31,6 @@
     "itplusx/flexible-pages": "^2.2"
   },
   "replace": {
-    "itplusx/flexible-news": "self.version",
     "typo3-ter/flexible-news": "self.version"
   },
   "config": {
