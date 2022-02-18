@@ -39,7 +39,7 @@
   },
   "extra": {
     "branch-alias": {
-      "dev-master": "2.0.x-dev"
+      "dev-main": "2.0.x-dev"
     },
     "typo3/cms": {
         "extension-key": "flexible_news",
